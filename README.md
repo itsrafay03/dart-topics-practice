@@ -1,2 +1,1 @@
-A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+In this repository you will find structured, topic-wise Dart code practice, providing clear examples and exercises for focused learning.
