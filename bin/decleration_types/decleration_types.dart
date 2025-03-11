@@ -21,8 +21,8 @@ void main(List<String> arguments) {
   print(num2);
 
   // var also used when the class name is too long to write or rembember.
-  // SliverChildrenListuilderDeligate sliverChildrenListuilderDeligate = new SliverChildrenListuilderDeligate();
-  // var refrence = SliverChildrenListuilderDeligate();
+  SliverChildrenListuilderDeligate sliverChildrenListuilderDeligate = SliverChildrenListuilderDeligate();
+  var refrence = SliverChildrenListuilderDeligate();
 
   // Dynamic Typing(using 'dynamic').
   dynamic sss;
@@ -33,7 +33,7 @@ void main(List<String> arguments) {
   print(value.runtimeType); // Now D.T of same variable is bool.
 
   // Special case of type inference.
-  var input;
+  Object input;
   input = 17;
   print(input.runtimeType);
   input = 45.555;
@@ -61,3 +61,6 @@ void main(List<String> arguments) {
 //   }
 //   print("Max number is $max and it's count is $count");
 // }
+
+
+class SliverChildrenListuilderDeligate {}
