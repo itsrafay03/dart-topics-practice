@@ -103,10 +103,12 @@ print(tech1.age);
 // tech1.age = 34;  // Error as we cannot change values of immutable Class Object.
 
 // We make class object as Runtime constant as object is made at runtime when constructor is called.
-// const Student studentConst = Student(); 
-final Student studentFinal = Student(); 
-const Duration durationConst = Duration();
-final Duration durationFinal = Duration();
+
+// const Student studentConst = Student(); // Class object cann't be compile time constant.
+final Student studentFinal = Student();   // Class object must be runtime constant.
+// Duration has all static constant fields so we can make it's object as compile time constant.
+const Duration durationConst = Duration();  
+final Duration durationFinal = Duration();  // It can also be runtime constant.
 }
 
 class Student {
