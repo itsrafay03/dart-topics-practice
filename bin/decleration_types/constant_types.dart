@@ -2,6 +2,8 @@
 // Compile time constant (const)
 // Run time constant (final)
 
+import 'dart:async';
+
 void main(List<String> args) {
   // Constant Strict type decleration.
   // Compile time constants with const keyword.
@@ -59,7 +61,7 @@ final bar = const [];
 // Similar to foo, const [] creates a compile-time constant empty list.
 // final ensures that bar can only be assigned once, and since it's assigned a const list, its content is also immutable.
 const baz = [];
-// This is equivalent to const baz = const [];.
+// This is equivalent to const baz = const [];
 // It creates a compile-time constant empty list, and baz cannot be reassigned.
 final bazz = [];
 // The variable bazz would be final, and only assigned once.
