@@ -102,6 +102,10 @@ print(tech1.name);
 print(tech1.age);
 // tech1.age = 34;  // Error as we cannot change values of immutable Class Object.
 
+// const Student studentConst = Student(); 
+final Student studentFinal = Student(); 
+const Duration durationConst = Duration();
+final Duration durationFinal = Duration();
 }
 
 class Student {
@@ -113,7 +117,7 @@ class Student {
 class Teacher {
   final String name;
   final num? age;
-  
+   
   // Optional Default constructor. 
   const Teacher({this.name = "Ali", this.age = 3}); // Make the constructor const
 }
