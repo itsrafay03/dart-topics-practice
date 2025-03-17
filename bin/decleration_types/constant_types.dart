@@ -2,7 +2,6 @@
 // Compile time constant (const)
 // Run time constant (final)
 
-import 'dart:async';
 
 void main(List<String> args) {
   // Constant Strict type decleration.
@@ -108,7 +107,7 @@ print(tech1.age);
 final Student studentFinal = Student();   // Class object must be runtime constant.
 // Duration has all static constant fields so we can make it's object as compile time constant.
 const Duration durationConst = Duration();  
-final Duration durationFinal = Duration();  // It can also be runtime constant.
+final Duration durationFinal = Duration();  // It can also be runtime constant as that like other classes.
 }
 
 class Student {
