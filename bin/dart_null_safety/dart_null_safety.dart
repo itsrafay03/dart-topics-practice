@@ -61,7 +61,7 @@ String name = student!; // Assertion operator.
 // Another intresting concept.
 
 // var? x;  // Error
-int? z;
+int? z;    // No Error
 // Reason:
 // The first statement, var? x; gives an error because 'var' cannot be combined with
 // a nullable type indicator (?). Dart infers the type automatically when using var,
