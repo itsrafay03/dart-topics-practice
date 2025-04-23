@@ -25,7 +25,10 @@ void main(List<String> arguments) {
 
   // void data type is also in Dart.
   void x;
-  //  print(x);    // Here we get an error because we can not use void as a datatype of a variable as void is used a RDT for functions which return nothing. So when we declare variable 'x' with void it actually donot declare any variable because void means “no value” and when we try to print 'x' it gives us error saying that what is 'x'?
+  //  print(x);    // Here we get an error because we can not use void as a datatype of a variable as 
+  // void is used a RDT for functions which return nothing. So when we declare variable 'x' with void it
+  // actually donot declare any variable because void means “no value” and when we try to print 'x' it 
+  // gives us error saying that what is 'x'?
 
   // String Interpolation:
   // We can use variables and expressions with the String Literals inside quotes with the use of '$' sign.

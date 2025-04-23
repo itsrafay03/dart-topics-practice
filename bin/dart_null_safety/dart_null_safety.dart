@@ -33,7 +33,7 @@ void main(List<String> arguments) {
   //initial value then it's default value is null.
   value = number;
   print(value
-      .runtimeType); // Still the type of value is null as the value initilize to it is intnullalbe which is currently null.
+      .runtimeType); // Still the type of value is null as the value initilize to it is int nullalbe which is currently null.
 
   // The type of value is intnullable so we can initilize null or int value to value.
   value = null;
