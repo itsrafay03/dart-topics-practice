@@ -2,7 +2,7 @@ void main(List<String> args) {
   String? nullableString;
   nullableString ??= 'Default Value';
   print(nullableString ?? 'This value'); // ternary conditional operator
-  // Alternative of this ternary conditional operator is Collasing operaotr in Dart.
+  // Alternative name of this ternary conditional operator is Collasing operaotr in Dart.
   print(nullableString ?? 'This Value');
 }
 

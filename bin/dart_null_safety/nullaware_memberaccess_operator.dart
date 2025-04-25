@@ -15,7 +15,7 @@ void main(List<String> args) {
   // before that there is student ref which is refering to nothing means null so it will return null as return value.
   student?.rollNo = 5;
   print(student?.rollNo); // print null.
-  print(student?.study()); // print null
+  print(student?.study()); // print nully
 
   student = Student();
   student?.rollNo = 7;

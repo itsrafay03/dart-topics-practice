@@ -2,6 +2,7 @@
 // It will behave same as nullsafe variable for ? and !
 
 // If we declare variable late and also initilize at the same time then there is obviously no use of late.
+// late num lateVariable = 30;  // Unnecessary 'late' modifier lintent.
 num lateVariable = 30;
 
 late num tax; // Declare late global variable.

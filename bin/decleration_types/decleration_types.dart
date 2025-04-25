@@ -1,6 +1,6 @@
 // There are 3 Decleration Types in Dart.
-// The var and dynamic variable can be declare without initilizing their value as they do not any specific
-// D.T so that's why
+// The var and dynamic variable can be declare without initilizing their value as they do not any specific D.T so that's why.
+
 var inp;
 dynamic ssssss;
 
@@ -14,11 +14,11 @@ void main(List<String> arguments) {
   var ss;
   print(ss.runtimeType); // Null as nothing initilize to variable ss.
   var num2 = 23;
-  print(num2.runtimeType);
-  // num2 = 3.415;    // Compile time error as first int value initilize to num2 so it's datatype is now int
+  print(num2.runtimeType); // prints int.
+  // num2 = 3.415;    // Compile time error as first int value initilize to num2 so it's datatype is now fixed as int
   // we cann't assign any other D.T value to num2.
   num2 = 999;
-  print(num2);
+  print(num2);   // prints 999
 
   // var also used when the class name is too long to write or rembember.
   SliverChildrenListuilderDeligate sliverChildrenListuilderDeligate = SliverChildrenListuilderDeligate();

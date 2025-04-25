@@ -18,8 +18,9 @@ void main(List<String> args) {
 // Another example.
   print(1 ?? 3); // <-- Prints 1.
   print(12); // -- Prints 12.
-  print(Null ?? 3);   // Now prints 3
+  print(3);   // Now prints 3
 
+  
   Student stu = s1 ?? s2!;
   // Although it will give Runtime error as s2 is also null but we give jhooti tasali.
 
