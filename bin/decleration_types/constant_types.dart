@@ -9,9 +9,9 @@ void main(List<String> args) {
   // const num aa;   // Error as it is compile time constant so must be initilized when declare.
   const num number = 27;
   // number = 111;   // Error: Cannot modify a constant. It will only initilize once.
+  print(number.runtimeType);   // print int
   const bool isPresent = true;
-  print(number.runtimeType);
-
+  
   // Runtime constants with final keyword.
   final Student
   st1; // No error as it is runtime constant so it can be declare without initilizing value

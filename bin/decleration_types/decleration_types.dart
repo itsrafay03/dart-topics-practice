@@ -35,13 +35,13 @@ void main(List<String> arguments) {
   // Special case of type inference.
   Object input;
   input = 17;
-  print(input.runtimeType);
+  print(input.runtimeType);  // Print int
   input = 45.555;
-  print(input.runtimeType);
+  print(input.runtimeType);  // Print double
   input = false;
-  print(input.runtimeType);
+  print(input.runtimeType);  // Print bool
   input = "All is well";
-  print(input.runtimeType);
+  print(input.runtimeType);  // Print String
 
 
   // foo([2, 5, 2, 10, 6, 2, 10, 8, 2, 10]);
