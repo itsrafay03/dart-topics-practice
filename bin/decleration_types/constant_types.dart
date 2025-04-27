@@ -18,10 +18,9 @@ void main(List<String> args) {
   // as it will be initilize during runtime.
   final Student student = Student();
   // student = Student();   // Error: Cannot modify a constant. It will only initilize once.
-  final String string = String.fromCharCode(
-    2,
-  ); // String only has named constructor in Dart.
-  print(string.runtimeType);
+  final String string = String.fromCharCode(2,); // String only has named constructor in Dart.
+  print(string.runtimeType);   // print String
+  print(string);   
 
   // Constant Type inference.(No defining of D.T).
   // Compile time constants with const keyword.
@@ -29,7 +28,7 @@ void main(List<String> args) {
   const isAbsent = true;
   // isAbsent = 45.55;   // Error as in typeinference 1st D.T of reference can not be changed.
   // isAbsent = false;  // Error: Cannot modify a constant. It will only initilize once.
-  print(digit.runtimeType);
+  print(digit.runtimeType);   // print int
 
   // Runtime constants with final keyword.
   final stu = Student();
