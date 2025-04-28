@@ -62,7 +62,7 @@ const baz = [];
 // This is equivalent to const baz = const [];
 // It creates a compile-time constant empty list, and baz cannot be reassigned.
 final bazz = [];
-// The variable bazz would be final, and only assigned once.
+// The variable bazz is final, and only assigned once.
 // However, the list would be mutable.
 final bazzz = const [];
 // Then the variable baz is final, and the list is immutable.
@@ -96,7 +96,7 @@ print(stu2.age);
 //Then you will able to make a const Class(), immutable class object. like define below a Teacher class.
 print("--------------");
 var tech1 = const Teacher(); 
-print(tech1.name);
+print(tech1.name); 
 print(tech1.age);
 // tech1.age = 34;  // Error as we cannot change values of immutable Class Object.
 
