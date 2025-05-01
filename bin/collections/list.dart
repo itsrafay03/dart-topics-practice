@@ -103,9 +103,12 @@ void main(List<String> args) {
   print(list18);
   print(list18.runtimeType);
 
-  // Collection for;
+  // Collection for:
   var list19 = [for (int i = 0; i <= 10; i++) i];
   print(list19);
   var list20 = [for(int i=1; i<=10; i++) i%2==0? i/3:0];
   print(list20);
+
+  // Collection for each:
+  
 }
