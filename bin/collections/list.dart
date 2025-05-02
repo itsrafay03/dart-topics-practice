@@ -106,9 +106,35 @@ void main(List<String> args) {
   // Collection for:
   var list19 = [for (int i = 0; i <= 10; i++) i];
   print(list19);
-  var list20 = [for(int i=1; i<=10; i++) i%2==0? i/3:0];
+  var list20 = [for (int i = 1; i <= 10; i++) i % 2 == 0 ? i / 3 : 0];
   print(list20);
+  var list21 = [
+    for (int i = 1; i <= 20; i++)
+      if (i % 3 == 0) ...[i % 4] else [(i % 4) + 1],
+  ];
+  print(list21);
 
   // Collection for each:
+  List<int> list22 = [for (var item in list19) item];
+  print(list22);
+  List list23 = [
+    for (var element in list19)
+      switch (element) {
+        0 => "Zero",
+        1 => "One",
+        2 => "Two",
+        3 => "Three",
+        4 => "Four",
+        5 => "Five",
+        6 => "Six",
+        7 => "Seven",
+        8 => "Eight",
+        9 => "Nine",
+        _ => "Other",
+      },
+  ];
+  print(list23);
+
+  
   
 }
