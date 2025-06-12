@@ -73,7 +73,7 @@ void main(List<String> args) {
   print(list14);
   print(list14.runtimeType);
 
-  // Collection if:
+  // Collection if statement:
   var list15 = [11, 22, 33, if (list3.length < 5) ...list3 else ...list6];
   print("List15 : $list15");
   List<Object> list16 = [
@@ -81,7 +81,7 @@ void main(List<String> args) {
   ];
   print("List16 : $list16");
 
-  // Collectiion switch:
+  // Collectiion switch statement:
   int value = 2;
   var list17 = [
     'Start',
@@ -105,7 +105,7 @@ void main(List<String> args) {
   print(list18);
   print(list18.runtimeType);
 
-  // Collection for:
+  // Collection for loop:
   var list19 = [for (int i = 0; i <= 10; i++) i];
   print(list19);
   var list20 = [for (int i = 1; i <= 10; i++) i % 2 == 0 ? i / 3 : 0];
@@ -116,7 +116,7 @@ void main(List<String> args) {
   ];
   print(list21);
 
-  // Collection for each:
+  // Collection for each loop:
   List<int> list22 = [for (var item in list19) item];
   print(list22);
   List list23 = [
