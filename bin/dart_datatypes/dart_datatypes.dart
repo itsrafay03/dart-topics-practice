@@ -29,6 +29,7 @@ void main(List<String> arguments) {
   // void is used a RDT for functions which return nothing. So when we declare variable 'x' with void it
   // actually donot declare any variable because void means “no value” and when we try to print 'x' it 
   // gives us error saying that what is 'x'?
+  
 
   // String Interpolation:
   // We can use variables and expressions with the String Literals inside quotes with the use of '$' sign.
@@ -40,7 +41,7 @@ void main(List<String> arguments) {
   String ss = "Samad " "Ahmad";
   print(ss);
   print('Ali ' 'Khan ' "Shb");
-
+  
   // But to Concatinate two variables having String we must need '+' operator to concatinate them as.
   String firstName = "Rohan ";
   var secondName = "Khalid";
@@ -52,8 +53,7 @@ void main(List<String> arguments) {
   String emoji = '\u1f44';
   print(emoji);
 
-  print(
-      pi); // pi is Global constant in dart. Also print is Global function in Dart.
+  print(pi); // pi is Global constant in dart. Also print is Global function in Dart.
 
   // Casting.
   double dd = 7.89;

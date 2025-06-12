@@ -27,7 +27,7 @@ void main(List<String> arguments) {
   int? value;
   print(number.runtimeType);
   print(value
-      .runtimeType); // Here value type is showing null because as not value is initilized to
+      .runtimeType); // Here value type is showing null because as no value is initilized to
   //value so compiler can't infer any type for value so it give it a default
   //type Null. Because in Dart everything is object and if a variable has no
   //initial value then it's default value is null.

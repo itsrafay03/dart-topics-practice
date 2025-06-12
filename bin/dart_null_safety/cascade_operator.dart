@@ -49,8 +49,7 @@ void main(List<String> args) {
     ..adddress = 'Lhr'
     ..rollNo = 34;
 
-  print(s
-    ?..rollNo); // It will print 'Instance of 'Student''  as this entire expression of cascade operator returning s, which is object/instance of Student.
+  print(s?..rollNo); // It will print 'Instance of 'Student''  as this entire expression of cascade operator returning s, which is object/instance of Student.
   print(s?.rollNo); // Now it give us 34.
 }
 

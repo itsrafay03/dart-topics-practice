@@ -156,6 +156,6 @@ void main(List<String> args) {
   thirdList = [1,null, 3, null,7];
   // As thirdList can refer to a List which can contain int or null values or both in a single list.
   // thirdList is very dynamic or flexible. 
-   
+  
 
 }

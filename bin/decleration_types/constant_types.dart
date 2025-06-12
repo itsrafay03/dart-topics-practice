@@ -16,7 +16,7 @@ void main(List<String> args) {
   final Student
   st1; // No error as it is runtime constant so it can be declare without initilizing value
   // as it will be initilize during runtime.
-  final Student student = Student();
+  final Student student = Student();   // can be initilize at compile time.
   // student = Student();   // Error: Cannot modify a constant. It will only initilize once.
   final String string = String.fromCharCode(2,); // String only has named constructor in Dart.
   print(string.runtimeType);   // print String
@@ -44,7 +44,7 @@ void main(List<String> args) {
 // The reason is that the z and x are variable means their value be determined at runtime. So when we
 // initilize const variable yy with variable it give error as const needs a compile time constant value
 // so here it's like we are not giving any value to yy so it shows error Const variables must be initialized with a constant value.
-// But the final variable yyy initilize with variable x because final is runtime constant so it will 
+// But the final variable yyy initilize with variable x (or z) because final is runtime constant so it will 
 // determine it's value at runtime and as x is variable which will also determine it's value at run time 
 // so at present at compile time it is not showing error. And at runtime yyy will also not show error as 
 // at runtime what ever the value of x is initilize to yyy.
@@ -75,7 +75,7 @@ final bazzz = const [];
 // Although a final object cannot be modified, its fields can be changed. In comparison, a const object 
 // and its fields cannot be changed: they're immutable. Because When you write const a = Student(), 
 // Dart implicitly treats it as const a = const Student().
-Student? stu1 = Student();  // Simple constructor call.
+Student? stu1 = Student();  // Simple constructor call
 print(stu1.name); 
 print(stu1.age); 
 stu1..name = "Salman"..age ??= 19;
@@ -88,7 +88,7 @@ print(stu2.age);
 stu2.name = "Waqas";
 print(stu2.name); 
 print(stu2.age);
-// stu2 = Student();  // Error that final variable can be set only once.
+// stu2 = Student();  // Error that final variable can be initilize only once.
 
 // If we want to make a Class object immutable then we have to make 2 changes that:
 // Make all fields final.
@@ -100,7 +100,7 @@ print(tech1.name);
 print(tech1.age);
 // tech1.age = 34;  // Error as we cannot change values of immutable Class Object.
 
-// We make class object as Runtime constant as object is made at runtime when constructor is called.
+// Generally the class object is only a Runtime constant as object is made at runtime when constructor is called.
 
 // const Student studentConst = Student(); // Class object cann't be compile time constant.
 final Student studentFinal = Student();   // Class object must be runtime constant.

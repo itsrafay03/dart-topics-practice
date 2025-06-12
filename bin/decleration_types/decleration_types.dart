@@ -13,7 +13,7 @@ void main(List<String> arguments) {
   // Type Inference(using 'var').
   var ss;
   print(ss.runtimeType); // Null as nothing initilize to variable ss.
-  var num2 = 23;
+  var num2 = 23;      
   print(num2.runtimeType); // prints int.
   // num2 = 3.415;    // Compile time error as first int value initilize to num2 so it's datatype is now fixed as int
   // we cann't assign any other D.T value to num2.
@@ -22,6 +22,7 @@ void main(List<String> arguments) {
 
   // var also used when the class name is too long to write or rembember.
   SliverChildrenListuilderDeligate sliverChildrenListuilderDeligate = SliverChildrenListuilderDeligate();
+  // instead of above write this.
   var refrence = SliverChildrenListuilderDeligate();
 
   // Dynamic Typing(using 'dynamic').
@@ -33,7 +34,7 @@ void main(List<String> arguments) {
   print(value.runtimeType); // Now D.T of same variable is bool.
 
   // Special case of type inference.
-  Object input;
+  var input;
   input = 17;
   print(input.runtimeType);  // Print int
   input = 45.555;
@@ -44,23 +45,23 @@ void main(List<String> arguments) {
   print(input.runtimeType);  // Print String
 
 
-  // foo([2, 5, 2, 10, 6, 2, 10, 8, 2, 10]);
+  foo([2, 5, 2, 10, 6, 2,11, 10, 8, 2, 10]);
 }
 
-// void foo(List list) {
-//   int max = 0;
-//   int count = 0;
-//   for (var i = 0; i <= (list.length - 1); i++) {
-//     if (list[i] > max) {
-//       max = list[i];
-//       count = 0;
-//     }
-//     if (max == list[i]) {
-//       count++;
-//     }
-//   }
-//   print("Max number is $max and it's count is $count");
-// }
+void foo(List list) {
+  int max = list[0];
+  int count = 0;
+  for (var i = 0; i <= (list.length - 1); i++) {
+    if (list[i] > max) {
+      max = list[i];
+      count = 0;
+    }
+    if (max == list[i]) {
+      count++;
+    }
+  }
+  print("Max number is $max and it's count is $count");
+}
 
 
 class SliverChildrenListuilderDeligate {}

@@ -13,4 +13,4 @@ class Secondaryclass {
 }
 
 // Global members of file cann't be accessible outside the file directly but they can be called indirectly as here 'a' and foo() are called indirectly.
-// Global members of file  can be accessible everywhere within a file in every class or scope.
+// Global members of file can be accessible everywhere within a file in every class or scope.
