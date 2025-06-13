@@ -118,7 +118,7 @@ void main(List<String> args) {
 
   // Collection for each loop:
   List<int> list22 = [for (var item in list19) item];
-  print(list22);
+  print("List22 : $list22");
   List list23 = [
     for (var element in list19)
       switch (element) {
