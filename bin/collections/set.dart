@@ -1,3 +1,7 @@
+// A Set is an unordered collection of unique items. 
+// No duplicate values allowed.
+// Unordered: No guaranteed order of elements.
+
 Set<String>? set1;
 
 void main(List<String> args) {

@@ -1,4 +1,4 @@
-import 'dart:async';
+// A List in Dart is an ordered collection of items, similar to an array in other languages. Allow duplicate elements.
 
 List<int>? nullList;
 

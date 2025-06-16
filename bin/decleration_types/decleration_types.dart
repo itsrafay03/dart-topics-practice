@@ -34,7 +34,7 @@ void main(List<String> arguments) {
   print(value.runtimeType); // Now D.T of same variable is bool.
 
   // Special case of type inference.
-  var input;
+  Object input;
   input = 17;
   print(input.runtimeType);  // Print int
   input = 45.555;

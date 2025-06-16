@@ -1,3 +1,8 @@
+// A Map is a collection of key-value pairs.
+// Keys must be unique
+// Values can be duplicated
+// {} is the literal of Map (by default) but if there is no key value pair in {} then it is a set.
+
 Map<int, String>? map1;
 void main(List<String> args) {
   print(map1); // null as map is not initilize.
