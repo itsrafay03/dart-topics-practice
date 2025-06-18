@@ -1,4 +1,4 @@
-// A Set is an unordered collection of unique items. 
+// A Set is an unordered collection of unique items.
 // No duplicate values allowed.
 // Unordered: No guaranteed order of elements.
 
@@ -20,9 +20,20 @@ void main(List<String> args) {
   print(set3);
 
   // Collection if else:
-  Set set4 = {0.1, 0.2, 0.3, if (set2.length == 5) ...set3 else ...set2};
+  Set set4 = {
+    0.1,
+    0.2,
+    0.3,
+    if (set2.length == 5)
+      ...set3
+    else if (set3.last == 'Khan')
+      ...set2
+    else
+      ...?set1,
+  };
   print(set4);
 
+  // Type Inference.
   var set5 = set4;
   print(set5 == set4); // True as they both refer to same object of Set.
   print(set5); // Same as set4 as they both refer to same object of Set.
@@ -32,7 +43,7 @@ void main(List<String> args) {
   print(set6); // prints {null} As there is no element in this set.
   print(
     set6.runtimeType,
-  ); // Set<void> as no D.T of set is defined and also there is no element in set.
+  ); // Set<void> as there is no element in set so due to type inference it's initial D.T will be void.
 
   // Collection switch.
   num number = 2;
@@ -52,9 +63,12 @@ void main(List<String> args) {
   print(set8);
 
   // Collection for each.
-  var set9 = {for(int item in set8) item >0 && item<=4 ?[1,2,3,2,3] : {1,2,3,2,3}};
+  var set9 = {
+    for (int item in set8)
+      item > 0 && item <= 4 ? [1, 2, 3, 2, 3] : {1, 2, 3, 2, 3},
+  };
   print(set9);
-  print(set9.runtimeType); // Set<Iterable<int>> as set9 is collection of different iterables of int
-
-  
+  print(
+    set9.runtimeType,
+  ); // Set<Iterable<int>> as set9 is collection of different iterables of int
 }
