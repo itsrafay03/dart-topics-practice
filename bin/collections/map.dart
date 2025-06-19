@@ -1,6 +1,5 @@
-// A Map is a collection of key-value pairs.
-// Keys must be unique
-// Values can be duplicated
+// A Map is a collection of key-value pairs. The elements do not have index like list but all elements are ordered and their index is their key as we can access element with their key.
+// Keys must be unique. Values can be duplicated.
 // {} is the literal of Map (by default) but if there is no key value pair in {} then it is a set.
 
 Map<int, String>? map1;

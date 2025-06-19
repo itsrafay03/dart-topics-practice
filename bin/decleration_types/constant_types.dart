@@ -54,7 +54,7 @@ void main(List<String> args) {
 // Below in all 3 objects the list object is immutable due to const[]. We cannot add, remove, or modify elements in those lists. 
 var foo = const [];
 // const [] creates a compile-time constant empty list.
-// Even though foo is var, the list it references is a const list, meaning its contents cannot be changed.
+// Even though foo is var, the list it refer is a const list, meaning its contents cannot be changed.
 final bar = const [];
 // Similar to foo, const [] creates a compile-time constant empty list.
 // final ensures that bar can only be assigned once, and since it's assigned a const list, its content is also immutable.
@@ -65,7 +65,7 @@ final bazz = [];
 // The variable bazz is final, and only assigned once.
 // However, the list would be mutable.
 final bazzz = const [];
-// Then the variable baz is final, and the list is immutable.
+// Then the variable bazzz is final(only assigned once), and the list is immutable(can not change elements).
 
 // In conclusion:
 // const makes the object immutable.

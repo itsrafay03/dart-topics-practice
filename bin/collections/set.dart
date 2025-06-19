@@ -1,4 +1,4 @@
-// A Set is an unordered collection of unique items.
+// A Set is an unordered collection of unique items. It do not have index of elements as there is no order.
 // No duplicate values allowed.
 // Unordered: No guaranteed order of elements.
 
