@@ -70,7 +70,7 @@ void main(List<String> args) {
   print(list10.runtimeType); // List<Object>
   // The Linent type is not recomanded because it will accept every type of object in list and make List<dynamic> so it's batter to use at least one template either with List or in case of type inference.
 
-  const List<int> list11 = const <int>[1, 2, 3, 4];
+  const List<int> list11 = <int>[1, 2, 3, 4];
   // Old syntax. First const will make reference variable as constant means it will not refer any other object and 2nd const will make the literal as constant that it will not allow any changing in literal.
   const List<int> list12 = <int>[1, 2, 3, 4];
   // New syntax. If const is with reference variable then it means the literal is also constant. So no need to write const with literal.
