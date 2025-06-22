@@ -101,6 +101,8 @@ void main(List<String> args) {
   // Most strict typing of variable set.
   Set<int> set1 = <int>{1, 2, 3, 4, 5};
 
+  var set = {for(int i = 0; i<=100; i++) i};  // Collection For Loop for Set.
+  print(set);
   // Set has all the same decleration types as discussed above for List.
 
   // Map
@@ -124,8 +126,15 @@ void main(List<String> args) {
     {"userId": 1, "id": 6, "title": "natus impedit quibusdam illo est"},
     {"userId": 1, "id": 7, "title": "quibusdam autem aliquid et et quia"},
   ];
-
   print(data.runtimeType);
 
+  var collection = demo();
+  print(collection.runtimeType);
+
+}
+
+// A Function.
+Iterable<num> demo(){
+  return [1, 2, 3, 4, 5, 2, 3];
 }
 
