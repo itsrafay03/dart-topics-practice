@@ -39,9 +39,7 @@ void secondFunction(int a, [int? b]) {
 
 // One mandatory parameter and other 2 are optonal positional parameters.
 void fourthFunction(int a, [int? b, int? c]){
-  print(a);
-  print(b);
-  print(c);
+  print('Fourth Function  a: $a, b: $b, c: $c');
 }
 
 // Default Optional Positional Parameter
@@ -52,11 +50,26 @@ void fifthFunction(int a, [int b = 7, int c = 10, int? d]){
   print(d ?? 00);
 }
 
-// Optional Named Parameter. It is not Positional(We can give value of any parameter before or after).
+// Optional Named Parameter. It is not Positional(We can give value of any parameter before or after) as it is named parameters.
 // We have to give values of parameters in function call with their parameter's name.  
 void sixthFunction({int? a , int? b}){
-  print(a);
-  print(b);
+  print('Sixth Function  a: $a, b: $b');
+}
+// One mandatory parameter with Optional Named Parameters.
+void seventhFunction(int a, {int? b, int? c}){
+  print('Seventh Function  a: $a, b: $b, c: $c');
+}
+
+// Required Optional Named Parameters. In this approch the mandatroy parameters are declared in {} and they are named also.
+// As they are Named parameters, not positional one, so we can give required parameters before or after optional parameters. 
+// But when we call this function they it is mandatory to give values to all the required parameters.
+void eightFunction({required int a, required int b, int? c, int? d, required int e}){
+  print('Eight Function  a: $a, b: $b, c: $c, d: $d, e: $e');
+}
+
+// Required Optional Named Default Parameters. It is same as above approch just here we can give default values to optional parameters in function header.
+void ninthFunction({required int a, required int b, int c = 88, int d = 99, required int e, String f = 'Ali'}){
+  print('Ninth Function  a: $a, b: $b, c: $c, d: $d, e: $e, f: $f');
 }
 
 // void function.
@@ -83,11 +96,24 @@ void main(List<String> args) {
   // Now mandatory parameter and 2 default optional parameters values are given for this function.
   fifthFunction(11, 12, 13);  
   
-  //
+  // As this below function has optional named parameters so we have option to give parameter's valueor not. And also we can know which parameter has which value as parameters are named.
   // As there are optional named parameters so we have to give values of parameters in function call with their parameter's name to specifiy which parameter value it is.  
   sixthFunction();
   sixthFunction(a: 0);
   sixthFunction(b: 1);
   sixthFunction(a: 1, b: 2);
   sixthFunction(b: 3, a: 4);
+  
+  // A function call with 1 mandatory parameter and 2 Optional Named Paraemters. 
+  seventhFunction(2);
+  seventhFunction(3, b: 4, c: 5);
+  seventhFunction(6, c: 6, b: 7);
+
+  // Call a Required Optional Named Parameters function. All parameters are named and we can give values of parameters in any sequence.
+  // But required named parameters are mandatory to give values and optional named parameters are optional.  
+  eightFunction(a: 1, b: 2, e: 3);
+  eightFunction(a: 1,c: 7, b:2 , e: 3,);
+  eightFunction(c: 7, a: 1, b: 2, e: 3, d: 17);
+
+
 }
