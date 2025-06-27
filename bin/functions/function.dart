@@ -1,3 +1,4 @@
+// Different types of Functions on the basis of their parameters.
 // public global function.
 num sum(num no1, num no2) {
   return no1 + no2;
