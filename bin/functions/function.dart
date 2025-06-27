@@ -68,8 +68,8 @@ void eightFunction({required int a, required int b, int? c, int? d, required int
 }
 
 // Required Optional Named Default Parameters. It is same as above approch just here we can give default values to optional parameters in function header.
-void ninthFunction({required int a, required int b, int c = 88, int d = 99, required int e, String f = 'Ali'}){
-  print('Ninth Function  a: $a, b: $b, c: $c, d: $d, e: $e, f: $f');
+void ninthFunction({required int a, required int b, int c = 88, int d = 99, required int e, String? f}){
+  print('Ninth Function  a: $a, b: $b, c: $c, d: $d, e: $e, f: ${f ?? 'Name'}');
 }
 
 // void function.
@@ -114,5 +114,12 @@ void main(List<String> args) {
   eightFunction(a: 1, b: 2, e: 3);
   eightFunction(a: 1,c: 7, b:2 , e: 3,);
   eightFunction(c: 7, a: 1, b: 2, e: 3, d: 17);
+
+  // Call a Required Optional Named Parameters function. All parameters are named and we can give values of parameters in any sequence.
+  // But required named parameters are mandatory to give values and optional named parameters are optional. 
+  // In this below function there are 3 required named parameters(a,b,e) , 2 default optional named parameters(c,d) , and 1 optional named parameter(f).
+  ninthFunction(a: 1, b: 10, e: 100);
+  ninthFunction(f: "Waqas",a: 1, b: 11, c: 154, e: 111);
+  ninthFunction(a: 2, c: 3, b: 22, d: 33, e: 222, f: 'Usman');
 
 }
