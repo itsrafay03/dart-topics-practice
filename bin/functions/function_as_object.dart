@@ -31,7 +31,8 @@ void main(List<String> args){
 
   // This is how callable object is called. ABC object is made and it's reference will go to 'add' reference variable.
   ABC add = ABC();
-  print(add(5, 5));
+  add.call(2, 2);   // Function call by using call method of functional class.
+  print(add(5, 5));   // Function call by using reference variable of functional object. It is syntactical sugar of above statement because in this call() is called implicitely.
 
   Person p = Person('Khan'); // Constrictor call. Person class object is made and it's reference is assigned to 'p' variable.
   // Simple greet function is called.
