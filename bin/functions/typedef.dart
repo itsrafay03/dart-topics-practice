@@ -2,6 +2,7 @@
 
 // in typedef we first use typedef reserved word then any random name of the type/Abstract class then '=' then we write RDT of the function and then 'Function' class then arguments of function that we want to use in parameter or return from any other function.
 typedef Sumition = num Function(num, num);
+typedef Add = int Function({required int a, required int b});
 
 void main(List<String> args){
   // bwp(sum);
@@ -21,6 +22,9 @@ void main(List<String> args){
   Student s1 = Student();
   mlt(s1.foo);
 
+  // Below it will give compile time error as bwp has the signature which do not match with that required in mlt() function. 
+  // mlt(bwp);
+  
 }
 
 // Simple sum function as we discussed previously that compiler will make it's implicit class and the object of that class is made in heap whose reference is stored in const variable 'sum'.
@@ -51,7 +55,7 @@ void isb(String a){
 }
 
 // Here is our mlt() function which need a specific function in parameter which return num value and take 2 num values in paraemter. So we have to define this signature explicitely in typedef. 
-// 
+// That's why in body we gave actual parameters. And for these actual parameter functionality of that function will work whose reference in given in mlt() function call. 
 void mlt(Sumition sumition){
   print(sumition(2,3));
 }
