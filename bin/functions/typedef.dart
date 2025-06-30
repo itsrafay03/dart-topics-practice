@@ -1,8 +1,13 @@
-//
+// How to define explicit type of a function by using typedef. And how to use a function in parameter of another function and how to return a function from another function.
 
 // in typedef we first use typedef reserved word then any random name of the type/Abstract class then '=' then we write RDT of the function and then 'Function' class then arguments of function that we want to use in parameter or return from any other function.
 typedef Sumition = num Function(num, num);
-typedef Add = int Function({required int a, required int b});
+typedef Add = int Function({required int a, required int b});  // typedef with required named parameters.
+
+// New way to define typedef
+typedef bool Compare(Object o1, Object o2);   // Here type name is Compare.
+
+typedef Calculations = int Function();
 
 void main(List<String> args){
   // bwp(sum);
@@ -24,7 +29,19 @@ void main(List<String> args){
 
   // Below it will give compile time error as bwp has the signature which do not match with that required in mlt() function. 
   // mlt(bwp);
-  
+
+  // Return function from a function.
+
+  // Here we are calling subtract function functions and assign it to a variable name 'result'. But we have to give that DT to result variable which is returning from subtract function. 
+  // As subtract function is returning another function of Calculations type so inshort subtract function is returning a value(whcih is function) of Calculations type so we have to make 'result' a variable of Calculations typee.
+  Calculations result = subtract(a: 20, b: 9);
+  // As subtract function is returning a function(closure) of Calculations type so in result we have that closure of same signature and RDT as mentioned in Calculations.
+  print(result);   // So that's why it give "Closure: () => int"
+  // If we want to call or execute that function which is returned from subtract function and now it is in result varriable, so for that we have to call the 'result' means call object as function. Because result is refering to that function object which we want to call.
+  print(result.call());
+  // or
+  print(result());  // syntactical sugar of above one. 
+
 }
 
 // Simple sum function as we discussed previously that compiler will make it's implicit class and the object of that class is made in heap whose reference is stored in const variable 'sum'.
@@ -58,5 +75,28 @@ void isb(String a){
 // That's why in body we gave actual parameters. And for these actual parameter functionality of that function will work whose reference in given in mlt() function call. 
 void mlt(Sumition sumition){
   print(sumition(2,3));
+}
+
+
+// Return a function(clousre) from another function.
+// A closure is a special function. A closure is a function defined within another function that remembers the variables from its outer function, even after the outer function has finished running. This allows the closure to access and use those variables later when it's called.
+// Here subtract function needs to return a function which take no parameters and return single int value. So we define those signature in typedef and make an explicit type/Abstract class and named the type as 'Calculations' and give then in RDT of subtract function to tell which type of function will return.
+// In the body of subtract function we are returning the given function as closure. The signature of returned function is same as that we required and as that we define above by typedef. 
+Calculations subtract({required int a, required int b}){
+  // We want to return the function by ourself which math requirment of Calculations so we retun closure here.
+  return () => a-b;
+  // Another closure.
+  // int ans = a-b;
+  // return () => ans;
+
+  // It is also correct because zoo() function has same signature and RDT whcih is required here for returned function. So instead of closure(means we define function by our own) we can return functional object of same signature as 'zoo'. 
+  // return zoo;   
+}
+// Short form of above function as it's body has simgle statement.
+Calculations minus({required int a, required int b}) => () => a-b;
+
+// function which required no parameters but return single int value. It has same signature and RDT as Calculations.
+int zoo(){
+  return 99;
 }
 
