@@ -7,6 +7,18 @@
 
 class Employee {
   String name;
+  int age;
+  double salary;
+  int scale;
+  Employee({
+    required this.name,
+    required this.age,
+    required this.salary,
+    required this.scale,
+  });
 
-  Employee({required this.name});
+  @override
+  String toString() {
+    return "Name: $name, Age: $age, Salary: $salary, Scale: $scale";
+  }
 }
