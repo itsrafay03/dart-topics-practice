@@ -11,7 +11,7 @@ typedef Calculations = int Function();
 
 void main(List<String> args){
   // bwp(sum);
-  // As the above sunction call will throw Runtime error as in bwp() body the f() need to 2 num values as actual parameters because we are passing sum function as paarmeter in bwp() function and in body of bwp() in the palce of 'f' the sum() is calling.
+  // As the above sunction call will throw Runtime error as in bwp() body the f() need to 2 num values as actual parameters because we are passing sum function as parameter in bwp() function and in body of bwp() in the palce of 'f' the sum() is calling.
 
   // Now in bwp() the isb is sent so Function type parameter f will assign to same object as isb. Means when f() is called actually isb() is calling.
   // So in body of bwp() f means isb calling with 1 string actual parameter so that's perfectly match the formal parameter of isb() function, so it gives no error. 
@@ -48,9 +48,7 @@ void main(List<String> args){
 num sum(num n1, num n2) => n1 + n2;
 // A callable/functional class ABC with call function in it, as we discused previously.
 class ABC {
-  num call(num n1, num n2){
-    return n1 + n2;
-  }
+  num call(num n1, num n2) => n1 + n2;
 }
 
 // A simple data class Student. It has a method foo() which has same RDT and signature as function of sum(), and call() method of ABC callable class, and function which is required in mlt function.  
