@@ -19,6 +19,6 @@ class Employee {
 
   @override
   String toString() {
-    return "Name: $name, Age: $age, Salary: $salary, Scale: $scale";
-  }
+    return "Name: $name, Age: $age, Salary: $salary, Scale: $scale\n";    
+  } // Here we use '\n' at end of line to print each element from list of employee in separate line.
 }
