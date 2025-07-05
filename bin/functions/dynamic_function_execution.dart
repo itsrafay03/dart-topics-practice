@@ -12,7 +12,7 @@ typedef Comparable = bool Function(Object, Object);
 // void function.
 void main(List<String> args) {
   // Simple Approch.
-  // print(employees);   // Simple display list of employees.
+  print(employees);   // Simple display list of employees.
   // sortEmployeeyAge(employees);    // It will sort the employees list in ascending order.
   // print(employees);   // Now show the sorted list of employees.
 
@@ -20,19 +20,43 @@ void main(List<String> args) {
   // Now before calling the sort() function we have to make a function which take two Object type parameters and return bool value.
   // Because we have to give that function in sort() function call as it needs Comparable type parameter.
   // So here we will make function to sort age wise. ut as we have to give it as actual parameter in place of Comparable so it has same signature and RDT as Comparable type required.
-  // Local Function.(A function within a function)
+  // Local Function.(A function which declare within another function)
   bool isAgeWiseCompare(Object o1, Object o2) {
     return (o1 as Employee).age > (o2 as Employee).age;
   }
-
-  print(employees);
   sort(employees, isAgeWiseCompare); // sort() is called for age wise sorting.
   print(employees);
 
-  // Similarly Scale wise sorting.
-  print(employees);
+  // Similarly Scale wise sorting. Call of Global Function.
   sort(employees, isScaleWiseCompar);
   print(employees);
+
+  // Local Anonymous Function.(Local function with No function identifier)
+  // As we need to call this local function only once here in parameter of sort() function so we prefer to make it local anonymous function where it has to be used.
+  // And the Comparable will get the reference of this function so all this things work properly, only syntax become short.
+  sort(employees, (Object o1, Object o2){
+    return (o1 as Employee).salary > (o1 as Employee).salary;
+  });
+  print(employees);
+
+  // To make syntax more shorter we can return the statement of Local Anonymous function by using Fat Arrow function or Inline function or Lambda function (=>)
+  // As this function only return single statement, so there is no need to use compound statement operator {} here.
+  sort(employees, (Object o1, Object o2) => (o1 as Employee).salary > (o2 as Employee).salary);
+
+  // No need to tell the D.T of parameteres of local function. As they are already defined in typedef so it will know what is the D.T of parameters as Comparable type function is needed here.
+  sort(employees, (o1, o2) => (o1 as Employee).salary > (o2 as Employee).salary);
+  // It is similar to that as below we just give the parameters without their D.T because their D.T is already defined in type def.
+  Comparable comp =(p0, p1) => true;
+  // Above we see that p0 and p1 are Object type, as defined above. 
+
+  // Now as we use type inference so D.T of com is not defined so here a and b will be of Dynamic type as no specific type is defined for them.
+  var com = (a, b) => false;   
+  
+  // We can not write D.T in functions as.
+    sort(employees, (o1, o2){
+    return (o1 as Employee).salary > (o1 as Employee).salary;
+  });
+
 }
 
 // type inference of employee objects list and make it run time constant due to "final" keyword.
