@@ -43,7 +43,7 @@ void main(List<String> args) {
   // As this function only return single statement, so there is no need to use compound statement operator {} here.
   sort(employees, (Object o1, Object o2) => (o1 as Employee).salary > (o2 as Employee).salary);
 
-  // No need to tell the D.T of parameteres of local function. As they are already defined in typedef so it will know what is the D.T of parameters as Comparable type function is needed here.
+  // No need to tell the D.T of parameters of local function. As they are already defined in typedef so it will know what is the D.T of parameters as Comparable type function is needed here.
   sort(employees, (o1, o2) => (o1 as Employee).salary > (o2 as Employee).salary);
   // It is similar to that as below we just give the parameters without their D.T because their D.T is already defined in type def.
   Comparable comp =(p0, p1) => true;
