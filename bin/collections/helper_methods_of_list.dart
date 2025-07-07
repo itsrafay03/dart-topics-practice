@@ -69,14 +69,51 @@ void main(List<String> args) {
   print(list.removeLast());
   print(list.skip(2));
   print(list.sublist(1, 3));
-  print(list.take(4));  // take first __ elements from list.
+  print(list.take(4)); // take first __ elements from list.
   print(list.toList());
   print(list.toSet());
   print(list.toString());
 
+  var slist = <String>[];
+  for (var element in list) {
+    if (element.length > 4) {
+      slist.add(element);
+    }
+  }
+  print(slist);
 
+  // the above work we can do in 1 line by using where.
+  var sublist = list.where((element) => element.length > 4).toList();
+  print(sublist);
 
+  print(list.firstWhere((element) => element.contains('s')));
+  print(list.lastWhere((element) => element.contains('s')));
+  print(list.indexWhere((element) => element == 'Aaia'));
+  print(
+    list.singleWhere((element) => element.contains('s')),
+  ); // If more then 1 element match the it throw error.
+  print(list.lastIndexWhere((element) => element.runtimeType == String));
+  print(list.whereType<num>());
 
+  var a = List.empty();
+  print(a);
 
-  // print(list.where((element) => element.length > 5,));
+  var b = List.filled(5, 'wwe');
+  print(b);
+
+  var c = List.from([1, 2, 3]);
+  print(c);
+
+  var d = List.of([1, 2, 4]);
+  print(d);
+
+  var e = List.unmodifiable([2,3]);
+  print(e);
+
+  Map<int, String> map = {1:'Ali', 2:'Qamar', 3:'Zafar'};
+  print(map.entries);
+  print(map.keys);
+  print(map.values);
+  print(map.runtimeType);
+  
 }
