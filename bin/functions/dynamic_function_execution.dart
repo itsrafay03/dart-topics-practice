@@ -35,7 +35,7 @@ void main(List<String> args) {
   // As we need to call this local function only once here in parameter of sort() function so we prefer to make it local anonymous function where it has to be used.
   // And the Comparable will get the reference of this function so all this things work properly, only syntax become short.
   sort(employees, (Object o1, Object o2){
-    return (o1 as Employee).salary > (o1 as Employee).salary;
+    return (o1 as Employee).salary > (o1).salary;
   });
   print(employees);
 
@@ -46,15 +46,15 @@ void main(List<String> args) {
   // No need to tell the D.T of parameters of local function. As they are already defined in typedef so it will know what is the D.T of parameters as Comparable type function is needed here.
   sort(employees, (o1, o2) => (o1 as Employee).salary > (o2 as Employee).salary);
   // It is similar to that as below we just give the parameters without their D.T because their D.T is already defined in type def.
-  Comparable comp =(p0, p1) => true;
+  comp(p0, p1) => true;
   // Above we see that p0 and p1 are Object type, as defined above. 
 
   // Now as we use type inference so D.T of com is not defined so here a and b will be of Dynamic type as no specific type is defined for them.
-  var com = (a, b) => false;   
+  com(a, b) => false;   
   
   // We can not write D.T in functions as.
     sort(employees, (o1, o2){
-    return (o1 as Employee).salary > (o1 as Employee).salary;
+    return (o1 as Employee).salary > (o1).salary;
   });
 
 }

@@ -5,7 +5,7 @@ typedef Sumition = num Function(num, num);
 typedef Add = int Function({required int a, required int b});  // typedef with required named parameters.
 
 // New way to define typedef
-typedef bool Compare(Object o1, Object o2);   // Here type name is Compare.
+typedef Compare = bool Function(Object o1, Object o2);   // Here type name is Compare.
 
 typedef Calculations = int Function();
 
