@@ -11,6 +11,15 @@ void main(List<String> args) {
   // Student s5 = Student(name:"Usman", rollNo: 27);
   // print(s4);
 
-  Worker w1 = Worker(age: 2,);
+
+  // Simply the Named Optional parameter Constructor of Worker class is called.
+  Worker w1 = Worker();
   print(w1);
+  Worker w2 = Worker(age: 23);
+  print(w2);
+  Worker w3 = Worker(name: 'Furqan');
+  print(w3);
+  Worker w4 = Worker(name: 'Zafar', age: 99);
+  print(w4);
+  
 }

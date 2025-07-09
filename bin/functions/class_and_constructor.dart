@@ -1,8 +1,8 @@
 // This file is to understand the basic scope of members of file and class. Along with types of constructor of a class.
 
 class Student {
-  int _rollNo;
-  String _name;
+  final int _rollNo;
+  final String _name;
 
   // Below are the constructors only for public datamembers. int? rollNo and String? name
   // Below is normal constructor as that we made in Java.
@@ -46,7 +46,7 @@ class Student {
   Student({int rollNo = 12, String name = 'Rizwan'})
       : _rollNo = rollNo,
         _name = name;
-  
+
   // toString method.
   @override
   String toString() {
