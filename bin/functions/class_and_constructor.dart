@@ -42,10 +42,12 @@ class Student {
   //       _name = name;
 
   // Now if we want Optional Default Named parameters in constructors for private datamembers, then we will remove Required and give them default values.
+  // Due to this combination we donot need constructor overloading as we have chooise to give actual value of parameters. Or we can give value of anyone specific parameter also.
   Student({int rollNo = 12, String name = 'Rizwan'})
       : _rollNo = rollNo,
         _name = name;
-
+  
+  // toString method.
   @override
   String toString() {
     return "RollNo: $_rollNo, Name: $_name";
