@@ -22,6 +22,12 @@ void main(List<String> args) {
   print(w4);
 
   // Now named constructor of Worker class is called.
+  // We just call Worker.fromJson and pass the json string in it's parameter. After that call the constructor redirecting start as discussed in named.constructor file.
   Worker w5 = Worker.fromJson('{"rollNo": "R-16", "name": "Imran", "age": 27}');
   print('Named Cons: $w5');
+
+  // Named constructors are useful in dart as they give smart approch instead to write long syntax of code.
+  // Another use of named constructors is the constructors of List.
+  var list = List.generate(10, (index) => index);
+  print('List: $list');
 }
