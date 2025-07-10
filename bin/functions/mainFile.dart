@@ -11,7 +11,6 @@ void main(List<String> args) {
   // Student s5 = Student(name:"Usman", rollNo: 27);
   // print(s4);
 
-
   // Simply the Named Optional parameter Constructor of Worker class is called.
   Worker w1 = Worker();
   print(w1);
@@ -21,5 +20,8 @@ void main(List<String> args) {
   print(w3);
   Worker w4 = Worker(name: 'Zafar', age: 99);
   print(w4);
-  
+
+  // Now named constructor of Worker class is called.
+  Worker w5 = Worker.fromJson('{"rollNo": "R-16", "name": "Imran", "age": 27}');
+  print('Named Cons: $w5');
 }
