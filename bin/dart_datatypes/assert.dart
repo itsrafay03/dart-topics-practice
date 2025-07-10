@@ -4,8 +4,8 @@
 // (when the code is compiled in release mode), so they don't affect performance in the final app.
 
 void main(List<String> args) {
-  int age = 19;
-  assert(age > 18);
+  int age = 1;
+  assert(age > 18, 'Enter correct age above 18.');
   print('ok');
 }
 
