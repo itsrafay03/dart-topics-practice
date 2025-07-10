@@ -60,3 +60,9 @@ class Worker {
 // fromMap(Map)
 //     ↓
 // Worker({name, age})
+
+
+// Cerilization: Dart Object(Map, List, e.t.c) --> Json String 
+// De-Cerilization: Json String --> Dart Object(Map, List, e.t.c) 
+// We give Json string to jsonDecode and it create it's Dart Object(Map<String, dynamic>), so it is decertlization.
+// We give Dart Object(Map<String, dynamic>) to jsonEncode and it create it's Json string, so it is certlization.
