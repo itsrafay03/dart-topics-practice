@@ -27,4 +27,5 @@ class DB {
 
 void main(List<String> args){
   var a = DB();
+  print(a);
 }  
