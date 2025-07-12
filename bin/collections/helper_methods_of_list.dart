@@ -1,5 +1,5 @@
 // Purple Cube icon represents Instance members (methods or properties). These are defined in the respective class.
-// White Wrench icon Extension methods represents Extension methods. These are methods added to a class externally via an extension, not originally part of the class.
+// White Wrench icon represents Extension methods and Property. These are methods added to a class externally via an extension, not originally part of the class.
 
 // Link: https://api.dart.dev/dart-core/List-class.html
 // Helper Methods of List.

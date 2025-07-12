@@ -18,6 +18,7 @@ class Driver extends Person {
   // As they are private fields so we cann't use them by their name in named parameter constructor, so we use Initilization list to assign values to private fields.
   // As they are final(constant) fields so we must have to give values of the fields during the construction of object. So that's why we give default values also that if user do not give values at time of Constructor call then these default values are used.
   // We use assert statement to check the abstraction on datamember(salary) that it must be greater then 37000. So this is checked here in initilization list before the value assign to datamember(salary).
+  // In assert(condition, String Errormessage) this string is the error message that will not show on terminal, but it will show as error message in Exception.
   // Driver({String name = 'Salman', double salary = 65000})
   //     : assert(
   //           salary >= 37000, 'Invalid salary! It must be greater then 37000'),

@@ -3,6 +3,7 @@
 // which helps you catch bugs early. assert statements are ignored in production
 // (when the code is compiled in release mode), so they don't affect performance in the final app.
 
+// In assert(condition, String Errormessage) this string is the error message that will not show on terminal, but it will show as error message in Exception.
 void main(List<String> args) {
   int age = 1;
   assert(age > 18, 'Enter correct age above 18.');

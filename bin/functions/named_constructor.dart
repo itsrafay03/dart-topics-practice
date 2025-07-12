@@ -2,7 +2,6 @@
 // The named constructor of this class is called in mainFile.dart file.
 
 import 'dart:convert';
-import 'dart:ffi';
 
 class Worker {
   int? age;
