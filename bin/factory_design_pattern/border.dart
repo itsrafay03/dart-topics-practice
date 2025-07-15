@@ -5,9 +5,8 @@
 class Border {
   // It is a datamember.
   String borderType;
-
+  
   // Now we will make a map in which key is BorderType and value is Borderclass object.
-  // 
   static final Map<BorderType, Border> _cache = {
     BorderType.noBorder:
         Border._internal(borderType: BorderType.noBorder.toString()),
@@ -22,9 +21,8 @@ class Border {
   // It is a Generative Constructor of Border class. But it is private so we can only access it within this file, not outside the file.
   Border._internal({required this.borderType});
 
-  // It is a Non-generative(Factory) Constructor of Border class. In this Singleton is implemented.
+  // It is a Non-generative(Factory) Constructor of Border class. In this Singleton is implemented, as everytime already made objects are used.
   // This constructor we will call when we want to create the object of Border class in other file.
-  // 
   factory Border(BorderType borderType) {
     return _cache[borderType]!;
   }
@@ -48,7 +46,7 @@ enum BorderType {
 
 // Then we define a static and final Map<BorderType, Border> named `_cache`.
 // `static` means it belongs to the class itself, not any instance.
-// `final` ensures that the reference to the map cannot be changed (although its contents can still be modified).
+// `final` ensures that the reference to the map cannot be changed (although its contents can still be modified). Also the main reason that in map we are calling constructor which call at runtime so that's why we use 'final' instead of 'const'.
 // The reason we make it static is because we want to return instances from this map inside the factory constructor — and factory constructors **cannot access instance members**, only static ones.
 
 // The `_cache` map stores **exactly one object** for each `BorderType`, using a private named constructor `Border._internal(...)` to create those objects initially.
@@ -61,3 +59,5 @@ enum BorderType {
 
 // This implementation follows the **Singleton design pattern**, customized for a finite set of possible instances.
 // It improves **memory efficiency** and ensures that the same instance is reused for each border type.
+
+
