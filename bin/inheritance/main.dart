@@ -9,9 +9,7 @@ void main(List<String> args) {
   artStudent.assignment(); // method of Student class.
   artStudent.toString(); // method of Object class.
   artStudent.hashCode; // property of Object class.
-
-print(00);
-print(9876543);
-
+  
+  print('jjj');
 
 }
