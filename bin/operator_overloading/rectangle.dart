@@ -45,6 +45,7 @@ class Rectangle {
       : this(h: map['height'], w: map['width']);
 
   // So called Operator Overloading.
+  @override
   bool operator ==(covariant Rectangle object) {
     return height == object._height && _width == object._width;
   }

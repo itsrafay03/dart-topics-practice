@@ -59,6 +59,7 @@ class Clock {
   // Also in parameter we gave Object type so it also satisfy criteria of overloading so there is no error any more and now we can use thia relational operator == in main to compare two objects according to defined functionality.
 
   // Case:4
+  @override
   bool operator ==(covariant Clock object) {
     return hours == object.hours &&
         minutes == object.minutes &&
