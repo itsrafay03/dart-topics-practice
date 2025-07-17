@@ -1,6 +1,6 @@
 // This file is made to understand Inheritance in Dart.
 
-// We made a Student class which act as a parent class for ArtStudent and
+// We made a Student class which act as a parent class for ArtStudent and primary interface for CsStudent class.
 class Student {
   // datamembers of class.
   int rollNo;

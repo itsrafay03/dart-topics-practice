@@ -18,10 +18,12 @@ class CsStudent implements Student{
 
   @override
   void assignment() {
-    
+    print('CS assignment done');
   }
 
   // Constructor of CsStudent class.
   CsStudent({this.rollNo = 0, this.name = 'abc', this.fee = 0.0});
   
 }
+// In above CsStudent class when we implement primary interface of Student class then the datamembers are also override along with functions Why?
+// Because in Dart datamembers and member functions both are objects and actually the objects implement in class so they both are override.
