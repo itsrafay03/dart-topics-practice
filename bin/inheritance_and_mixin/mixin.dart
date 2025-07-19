@@ -14,7 +14,7 @@
 // Mixin using with to include other mixins as mixin can't use with because composition is only allowed in classes; mixins must use extends to build on each other.
 
 // Here is a Mixin of Cart and all the things which can be possible in Mixin.
-mixin Cart{
+mixin Cart on Vehicle{
   // Instance variable in mixin.
   int maxload = 0;
   // Static constant in mixin.
@@ -34,16 +34,75 @@ mixin Roof{
   int size = 0;
 }
 
+// Vehicle class as a parent class of Car class.
 class Vehicle{
   String? company;
 }
 
+// car class as a child class of Vehicle class and mix with two mixins.
 class Car extends Vehicle with Cart, Roof{
-  // We can access all the members of Vehicle, Roof, Cart from the object of Car class in main.
+  // We can access all the members of Vehicle, Roof, Cart from the object of Car class in main function below.
 }
 
+// We can restrict the mixin that you can mix with only this class and child classes of this class, not mix with other classes.
+// As we make simple Cart mixin 'on Vehicle' so now it will only mix with Vehicle or it's child classes like Car. As we seen above.
+// But now if we want tp mix Cart mixin with Animal class it will show error as below. 
+// class Animal with Cart {}
 
+// One mixin can implements another mixin.
+mixin FlyingCart implements Roof{}
 
+// We can implements the Mixin on class. But we must have to override the members of Mixin in that class.
+class Foo implements Roof {
+  @override
+  late int size;
+}
 
+// Error because classes only extends with only classes, not extends with mixins.
+// class Soo extends Roof {}
 
+// If we implements Car class with any other class then we have to must override the members of Vehicle, Cart and Roof.
+// As done following, just we add 'late' keyword with every datamember as to tell compiler that we will tell their value later on. 
+class Koo implements Car {
+  @override
+  late num _value;
 
+  @override
+  String? company;
+
+  @override
+  late int maxload;
+
+  @override
+  late int size;
+
+  @override
+  late num value;
+
+  @override
+  soo() {
+    // TODO: implement soo
+    throw UnimplementedError();
+  }
+  
+}
+
+// main function.
+void main(List<String> args) {
+  // Car class object so that we can see how members of Mixin(Cart, Roof) and inheriated class(Vehicle) are accessed here.
+  Car car = Car();
+  car.company;  // member of Vehicle class.
+  car.maxload;  // member of Cart Mixin.
+  car.size;  // member of Roof Mixin.
+
+  // As mixin is like inheritance so it has same advantages reusability of code and generalization.
+  // Here Roof is acting as a parent of Car so it can keep the reference of child object as discussed below.
+  // Also now from 'roof' we can only access member of Roof only as it happen in inheritance.
+  Roof roof = Car();
+  roof.size;
+  // roof.maxload;   // show error 
+
+  // Constructors of Mixins are not allowed.
+  // Cart cart = Cart();   // Error
+
+}

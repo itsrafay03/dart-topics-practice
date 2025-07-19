@@ -18,6 +18,4 @@ void main(List<String> args) {
   csStudent.name;
   csStudent.assignment();
 
-  // Car class object so that we can see how members of Mixin(Cart, Roof) are accessed here.
-  Car car = Car();
 }
