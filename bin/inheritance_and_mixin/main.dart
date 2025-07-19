@@ -1,5 +1,6 @@
 import 'art_student.dart';
 import 'cs_student.dart';
+import 'mixin.dart';
 // This file is to have main function to construct and execute the objects of classes.
 
 void main(List<String> args) {
@@ -16,4 +17,7 @@ void main(List<String> args) {
   CsStudent csStudent = CsStudent();
   csStudent.name;
   csStudent.assignment();
+
+  // Car class object so that we can see how members of Mixin(Cart, Roof) are accessed here.
+  Car car = Car();
 }
