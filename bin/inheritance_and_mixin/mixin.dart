@@ -52,7 +52,7 @@ class Car extends Vehicle with Cart, Roof{
 // One mixin can implements another mixin.
 mixin FlyingCart implements Roof{}
 
-// We can implements the Mixin on class. But we must have to override the members of Mixin in that class.
+// We can implements the Mixin on class. But we must have to override the members of Mixin in that class. ecause here mixin is acting like interface.
 class Foo implements Roof {
   @override
   late int size;
