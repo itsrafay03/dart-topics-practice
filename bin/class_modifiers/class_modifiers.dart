@@ -10,7 +10,7 @@ abstract class Vehicle {
   void speed(int metersPerHour);
 
   // Abstract class can have concrete methods.
-  void noOfWheels(int numberofWheels){
+  void noOfWheels(int numberofWheels) {
     if (numberofWheels >= 4) {
       print('Done.');
     } else {
@@ -20,21 +20,49 @@ abstract class Vehicle {
 }
 
 // 2) Base
-base class Teacher{
-  void teachingSubject(String subjectName){
+base class Teacher {
+  void teachingSubject(String subjectName) {
     print('Subject is $subjectName');
   }
 }
 
-// 3) Interface 
+// 3) Interface
 interface class Animal {
   // Interface class can have concrete methods.
-  void hunting(){
+  void hunting() {
     print('Hunting for food');
   }
   // If class has simple interface modiifier then it has only concrete methods no abstract methods.
   // If class has interface and abstract both modifiers then due to abstarct we can have abstract methods in the class.
 }
 
+// 4) Abstract Interface
+abstract interface class ICricketPlayer {
+  // abstract interface class can have concrete methods due to interface modifier.
+  void batting() {
+    print('Oppner');
+  }
+
+  // abstract interface class can have abstract methods due to abstract modifier.
+  void fielding();
+  bool toss(String side);
+}
+
+// 5) Final
+final class Lamborghini {
+  // final class can have only concrete methods.
+  void tuneing(){
+    print('Lamborghini is ready to go');
+  }
+  
+  // final class can not have abstract methods.
+  // void burnout();   // show error
+  // bool drifting();   // show error
+}
+
+// 6) Sealed
+sealed class University {
+  
+}
 
 
