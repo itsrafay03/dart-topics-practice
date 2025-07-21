@@ -1,3 +1,4 @@
+// https://dart.dev/language/mixins
 // Now we have another intresting concept of mixin that as we know mixin act as a parent of the class who mix it.
 // But as parent class in inheritance there is constructor of parent class which caleed implicitely if it is default or if it is parameterized constructor then we call it from 'super' in child concrete class so that we can give values of it's parameters.
 // Now as we know that mixin have no constructors. So if we want to access the mixin members in the constructor of a class who mix the mixin, so that we can use the mixin members in parameter of child constructor and give the values of mixin members when object of subclass is created.
@@ -41,7 +42,7 @@ class Student extends Human with CarDriver {
     carName = carName;
     speed = speed;
   }
-  
+
   // 2nd way.
   // Student(
   //     {required this.studentName, required String carName, required int speed})
