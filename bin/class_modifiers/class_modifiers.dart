@@ -51,18 +51,31 @@ abstract interface class ICricketPlayer {
 // 5) Final
 final class Lamborghini {
   // final class can have only concrete methods.
-  void tuneing(){
+  void tuneing() {
     print('Lamborghini is ready to go');
   }
-  
+
   // final class can not have abstract methods.
   // void burnout();   // show error
   // bool drifting();   // show error
 }
 
-// 6) Sealed
-sealed class University {
-  
+// Final class can extends inside the same file.
+base class FavouriteCar extends Lamborghini {}
+
+// Final class can implements inside the same file.
+final class MyCar implements Lamborghini {
+  @override
+  void tuneing() {
+    // TODO: implement tuneing
+  }
 }
 
+// 6) Sealed
+sealed class University {
+  // It can have abstract methods.
+  void feeStructure();
+  // It can have concrete methods.
+  void admissions() {}
+}
 
