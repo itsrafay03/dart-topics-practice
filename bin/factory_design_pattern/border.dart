@@ -3,7 +3,7 @@
 // So this is memory effecient approch because by using Singleton patter we have only 4 objects in memory otherwise if we make the generative constructors of order class then we have as many objects as many constructors call.
 
 class Border {
-  // It is a datamember.
+  // It is a datamember. 
   String borderType;
   
   // Now we will make a map in which key is BorderType and value is Borderclass object.

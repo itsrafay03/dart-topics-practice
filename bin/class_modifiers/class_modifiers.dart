@@ -79,3 +79,6 @@ sealed class University {
   void admissions() {}
 }
 
+// 7) Mixin class and mixin are two different things. Mixin class is access modifier of class. While mixin is separate type in Dart like class and enum. 
+
+

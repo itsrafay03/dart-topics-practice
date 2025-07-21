@@ -9,7 +9,7 @@
 // Mixin can be constrained using 'on' (mixin Bark on Animal {})
 // Mixin can have (Instance variables, Static constants, Static methods, Instance methods, getters/setters)
 // Not Allowed:
-// Constructors in mixin as mixins are composable units and cannot be instantiated, so constructors are meaningless and not allowed.
+// Constructors in mixin as mixins are composable units and cannot be instantiated, so constructors are meaningless and not allowed. Mixin do not have any implicit or explicit constructors.
 // Mixin extending a class as mixins must not have a superclass other than Object to ensure clean code reuse without inheritance conflicts.
 // Mixin using with to include other mixins as mixin can't use with because composition is only allowed in classes; mixins must use extends to build on each other.
 
@@ -52,7 +52,7 @@ class Car extends Vehicle with Cart, Roof{
 // One mixin can implements another mixin.
 mixin FlyingCart implements Roof{}
 
-// We can implements the Mixin on class. But we must have to override the members of Mixin in that class. ecause here mixin is acting like interface.
+// We can implements the Mixin on class. But we must have to override the members of Mixin in that class. Because here mixin is acting like interface.
 class Foo implements Roof {
   @override
   late int size;
@@ -84,8 +84,11 @@ class Koo implements Car {
     // TODO: implement soo
     throw UnimplementedError();
   }
-  
 }
+
+// When you use a mixin in Dart, the compiler injects/copies the mixin's members (methods and variables) directly into the class that uses it.
+// There is no separate mixin object created — it's just as if the mixin’s code is copied into the class at compile time.
+// It's  not like we studied in inheritance that parent object is formed in child's object and then we can access parent members from child object. 
 
 // main function.
 void main(List<String> args) {
@@ -95,9 +98,9 @@ void main(List<String> args) {
   car.maxload;  // member of Cart Mixin.
   car.size;  // member of Roof Mixin.
 
-  // As mixin is like inheritance so it has same advantages reusability of code and generalization.
+  // As mixin is like inheritance(not exactly inheritance) so it has same advantages reusability of code and generalization.
   // Here Roof is acting as a parent of Car so it can keep the reference of child object as discussed below.
-  // Also now from 'roof' we can only access member of Roof only as it happen in inheritance.
+  // Also now from 'roof' we can only access member of Roof only as it happen in inheritance that roof required the reference of that object whose metadata is like Roof. 
   Roof roof = Car();
   roof.size;
   // roof.maxload;   // show error 
