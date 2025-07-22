@@ -91,18 +91,23 @@ void main(List<String> args) {
   // first = 5;   // The final variable 'first' can only be set once.
 
 
-  // Part 7: Destructuring of Class constructor.
+  // Part 7: Destructuring of a class object using pattern matching.
   // Just like records, any composite type (i.e., a type made up of multiple fields or values) can be destructured using pattern matching in Dart. This includes classes — but only if they have a matching constructor and accessible fields.
   // Dart supports destructuring via class patterns, which allow you to extract individual fields from class instances.
   var size = Size(height: 100, width: 200);
   print(size);
   print(size.runtimeType);  // size, because it refer to the object of Size class.
-  // For destructuring of constructor we have to 
+  // For destructuring of object we have to use same rule like we are calling constructor, just in place of values use variables. 
   var Size(width: w, height: h) = size;
   print(w);
-  // or we can do.
+  // or.
   var Size(:height, :width) = Size(height: 190, width: 77);
   print("Height: $height, Width: $width");
+
+  // Above we can change the value of variables as they are mutable due to 'var'. But now we will make them immutable by using 'final'.
+  final Size(height:heig, width: wid) = Size(height: 24, width: 25);
+  print("Height: $heig, Width: $wid");
+
 }
 
 // If we want to return multiple type of values from function so we can use record as RDT. In actual only single type value is returning from function which is record. But record is composit type.
