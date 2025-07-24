@@ -7,6 +7,7 @@
 
 // main function.
 import 'dart:ffi';
+import 'dart:math' as math;
 
 void main(List<String> args) {
   // Constant Pattern Matching: In constant pattern matches the value is equal to the pattern's constant which is a literal constant.
@@ -107,7 +108,7 @@ void main(List<String> args) {
   // Guard clauses evaluate an arbitrary condition as part of a case, without exiting the switch if the condition is false (like using an if statement in the case body would cause).
   switch ((3, 5)) {
     case (int a, int b):
-    if (a > b) print('First element greater');
+      if (a > b) print('First element greater');
     // If false, prints nothing and exits the switch.
     // Instead of writing separate if statement we can do this check by using gaurded clause as below.
     case (int a, int b) when a > b:
@@ -115,7 +116,7 @@ void main(List<String> args) {
       print('First element greater');
     case (int a, int b) when a < b:
       print('First element not greater');
-    // The fix of this dead code is to comment or remove 1st case.  
+    // The fix of this dead code is to comment or remove 1st case.
   }
 
   // For and for-in loops: You can use patterns in for and for-in loops to iterate-over and destructure values in a collection.
@@ -124,6 +125,29 @@ void main(List<String> args) {
   // As we have for-in loop here so it will iterate through each entry of a map and for each iteration we destructure each element of map in (key: key, value: count) and print it.
   for (var MapEntry(key: key, value: count) in map.entries) {
     print('$key occured $count times');
+  }
+
+  // As we have same variable name 'key' as the actual field name 'key' so we can use it like below.
+  for (var MapEntry(:key, value: count) in map.entries) {
+    print('$key occurred $count times');
+  }
+
+  // Destructuring multiple returns: Most of it's code is done in documentation so see it from there.
+  // Algebraic data types
+  num calculateArea(Shape shape) => switch (shape) {
+    Circle(size: var radius) => math.pi * (2 * radius),
+    Square(size: var length) => length * length,
+    _ => 0.0
+  };
+
+  // Map and list patterns work well for destructuring key-value pairs in deserialized data, such as data parsed from JSON.
+  var data = {'user': ['Rohan', 23]};
+  var {'user': [name, age]} = data;
+  print('$name age is $age');
+
+  // use of if-case statement in Dart.
+  if(data case {'user': [String name, int age]}){
+      print('$name age is $age');
   }
 }
 
@@ -136,12 +160,10 @@ class Shape {}
 
 class Square extends Shape {
   final num size;
-
   Square({required this.size});
 }
 
 class Circle extends Shape {
   final num size;
-
   Circle({required this.size});
 }

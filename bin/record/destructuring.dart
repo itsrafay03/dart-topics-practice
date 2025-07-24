@@ -127,4 +127,33 @@ class Size {
   Size({required this.height, required this.width});
 }
 
-// 'Records as simple data structures' is very infromative topic in offical documentation. So after this see it also for once.
+// Types of Destructuring in Dart.
+// 1. Variable Destructuring
+// Uses var or final to extract values from records or patterns into new variables. Most commonly used with records and object patterns.
+// var (a, b) = (1, 2); // a = 1, b = 2
+
+// 2. Constant Pattern Destructuring
+// Compares against existing constant values instead of binding variables. No new variable is declared.
+// const expected = 5;
+// switch (5) {
+//   case expected: print('Matched'); // Matches if value equals expected
+// }
+
+// 3. Object Destructuring
+// Extracts properties from objects using object patterns (e.g., class fields). Often used in switch or if-case statements.
+// class Point {
+//   final int x, y;
+//   Point(this.x, this.y);
+// }
+// void main() {
+//   var point = Point(3, 4);
+//   switch (point) {
+//     case Point(x: var a, y: var b): print('a=$a, b=$b');
+//   }
+// }
+
+// 4. List/Array/Map Destructuring
+// Extracts elements from a list using a list pattern.
+// var [first, second] = [10, 20]; // first = 10, second = 20
+
+// 'Records as simple data structures' is very infromative topic in offical documentation. It is not discussed here so also see it for once.
