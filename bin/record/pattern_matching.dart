@@ -6,7 +6,6 @@
 // In this file sir practice the code form the offical docs so let's start.
 
 // main function.
-import 'dart:ffi';
 import 'dart:math' as math;
 
 void main(List<String> args) {
