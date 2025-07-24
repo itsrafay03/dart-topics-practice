@@ -1,4 +1,3 @@
-import 'class_modifiers.dart';
 // Use of class modifier: Mixin class
 // Here it is a class with mixin access modifier. It is different from 'mixin' which is a type like class or enum. So do not mix mixin class with mixin.
 // We have discussed mixin already in 'inheritance_and_mixin' folder. SO here we will only discuss mixin class.

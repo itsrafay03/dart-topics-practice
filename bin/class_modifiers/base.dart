@@ -14,10 +14,6 @@ Teacher teacher = Teacher();
 
 // base class can be extended in other file.
 base class CasSir extends Teacher {  
-  @override
-  void teachingSubject(String subjectName) {
-    super.teachingSubject(subjectName);
-  }
 }
 
 // When a developer defines a class as base, they are saying:

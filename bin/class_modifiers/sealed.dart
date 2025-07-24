@@ -1,4 +1,3 @@
-import 'class_modifiers.dart';
 // Use of class modifier: Sealed
 // No Objects, No extends, No implements outside the file/package/library.
 // It can extends and implements inside same file. But no object inside the file too.

@@ -1,6 +1,5 @@
 import 'art_student.dart';
 import 'cs_student.dart';
-import 'mixin.dart';
 // This file is to have main function to construct and execute the objects of classes.
 
 void main(List<String> args) {

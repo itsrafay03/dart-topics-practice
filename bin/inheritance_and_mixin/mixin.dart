@@ -20,9 +20,9 @@ mixin Cart on Vehicle{
   // Static constant in mixin.
   static const String material = 'steel';
   // Static method in mixin.
-  static foo(){}
+  static void foo(){}
   // Non-static(Instance) method in mixin.
-  soo(){} 
+  void soo(){} 
   // property(getter/setter)
   num _value = 99;
   num get value => _value;

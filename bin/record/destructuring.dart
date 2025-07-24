@@ -22,8 +22,7 @@ void main(List<String> args) {
   var info = ('Python', false, {2, 3, 4});
   // info is a record of positional fields, now it is destructure.
   var (langName, isEasy, setOfValues) = info;
-  print(info
-      .$3); // instead of this we can write below one because info record is destructured and it's 3rd field assign to the variable 'setOfValues'.
+  print(info.$3); // instead of this we can write below one because info record is destructured and it's 3rd field assign to the variable 'setOfValues'.
   print(setOfValues);
 
   // Destructuring of Named fields records.
@@ -127,3 +126,5 @@ class Size {
   double width;
   Size({required this.height, required this.width});
 }
+
+// 'Records as simple data structures' is very infromative topic in offical documentation. So after this see it also for once.
