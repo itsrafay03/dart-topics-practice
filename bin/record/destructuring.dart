@@ -92,7 +92,7 @@ void main(List<String> args) {
 
   // Part 7: Destructuring of a class object using pattern matching.
   // Just like records, any composite type (i.e., a type made up of multiple fields or values) can be destructured using pattern matching in Dart. This includes classes — but only if they have a matching constructor and accessible fields.
-  // Dart supports destructuring via class patterns, which allow you to extract individual fields from class instances.
+  // Dart supports destructuring via class patterns, which allow you to extract individual fields from class instances. Object patterns can only use named fields as variable names.
   var size = Size(height: 100, width: 200);
   print(size);
   print(size.runtimeType);  // size, because it refer to the object of Size class.

@@ -97,6 +97,7 @@ void main(List<String> args) {
   // Switch statements can have multiple cases share a body without using logical-or patterns, but they are still uniquely useful for allowing multiple cases to share a guard.
   // This is a pattern matching case with object destructuring. You're checking if shape is either a Square object that has a size field or a Circle object that has a size field. If matched, you're extracting (destructuring) the size field into a local variable 's' which use type inference var.
   // 'when s > 0' is a Guard Clause. This is an extra condition (guard) after pattern matching. If it is true then the case is properly matched and print the line.
+  // Object patterns can only use named fields.
   Shape shape = Circle(size: 25);
   switch (shape) {
     case Square(size: var s) || Circle(size: var s) when s > 0:
