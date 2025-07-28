@@ -31,8 +31,6 @@ void main(List<String> args) async {
   // This is called Async-await that first there is await of 3s for sum() function then 2s await for avg() function and then few milli seconds await for async functions of File class. 
   // So in short if async functions are calling and executing like sync functions so then use above mentioned way to improve the code readability of code.
   
-  
-
 }
 
 Future<num> sum(num no1, num no2) {

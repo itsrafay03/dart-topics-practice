@@ -54,10 +54,13 @@ void main(List<String> args) async {
     (event) => print(event % 2 == 0),
   );
 
-  // // We can make other streams form the main stream and also listen them as following.
+  // We can make other streams form the main stream and also listen them from their respective listeners as following.
+  // Below .map() is a method of the Iterable class .map() returns an Iterable. It is used to apply a function to each element in a collection and return a new iterable with the transformed elements. In short change the datatype of elements, or modify the elements of collection.
   var stringStream = stream.map(
     (event) => "This is the value $event",
   );
+  // Here listen of main stream not called because we have made a new stream from main stream. Now here listen of stringstream is called as it has by default single subscription so only once it is listen.
+  // Here we cannot call multiple listeners for stringStream because currently it has by-default single subscription. For that we need asroadcastStream subscription for stringStream.
   stringStream.listen(
     (event) => print(event),
   );
@@ -65,6 +68,7 @@ void main(List<String> args) async {
   // stream generate int one by one -> stringstream get those ints one by one and convert them to string one by one -> listener of stringstream prints that string comming from stringstream one by one.
 
   // Below we create another stream from main stream. This will read every int from stream and pass only even ints to evenstream. Then we called listener for evenStream anonymously with it.
+  // Here we cannot call multiple listeners for evenStream because currently it has by-default single subscription.
   var evenStream = stream
       .where(
         (event) => event.isEven,
@@ -72,7 +76,9 @@ void main(List<String> args) async {
       .listen(
         (event) => print(event),
       );
-}
+
+  // Although above each subStream(stringStream and evenStream) has their own stream subscription and listners. But they all are made from main stream so indirectly their listner is considered as a listener of main stream. So main stream should have asBroadcastStream subscription so that it have multiple listners.
+} 
 
 // This is an Async Generative Function which will generate Stream(async collection). Means here it will generate a collection of intigerts values but one by one after specific delay value will add to the collection.
 // To make generative function we will put DT of value of collection in Stream template type. And use 'async*' keyword after function header so that to make this function Async Generative Function. Now this function will generate collection asynchronously.
