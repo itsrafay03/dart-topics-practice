@@ -48,3 +48,9 @@ Future<num> avg(num sumValue, int items) {
     () => sumValue / items,
   );
 }
+
+// This is a async function which will return a bool value by using named constructor of Future class Future.value().
+Future<bool> foo()async{
+  await Future.delayed(const Duration(seconds: 2));
+  return Future.value(true);
+}
