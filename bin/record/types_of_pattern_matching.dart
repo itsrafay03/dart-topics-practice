@@ -43,7 +43,7 @@ void main(List<String> args) {
   String? maybeString = 'nullable with base type String';
   print("Runtype of maybeString is ${maybeString.runtimeType}");
   switch (maybeString) {
-    case var s?:
+    case var s:
       print("Runtype of s is ${s.runtimeType}");
       break;
     case null:

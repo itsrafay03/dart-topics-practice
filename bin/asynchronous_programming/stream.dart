@@ -2,7 +2,6 @@
 // Stream gives us multiple Future values after specific delay. Stream is an Async collection. Because in sync collection we get complete collection(List) at a time but in async collection we get the values of collection(List) one by one after specific delay.
 // main function
 import 'dart:async';
-import 'dart:math';
 
 void main(List<String> args) async {
   // generateNumbers() is returning Stream so in stream1 variable we get Stream of int.
