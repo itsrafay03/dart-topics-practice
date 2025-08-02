@@ -28,10 +28,7 @@ extension MyString on String? {
   // .every((element) => condition): This checks if every rune (character code) satisfies the condition, that it's a digit (ASCII code between 48 and 57).
   // If we don't use "?? false" then if the condition is false it will return null. '?? false' ensures that if the string is null, we return false instead of null. So the function always returns a bool, never null.
   bool isDigitString() {
-    return this?.runes.every(
-              (element) => element >= 48 && element <= 57,
-            ) ??
-        false;
+    return this?.runes.every((element) => element >= 48 && element <= 57) ?? false;
   }
 }
 
