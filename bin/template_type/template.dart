@@ -2,7 +2,6 @@
 // The template type in Dart is same as in Java. Template type is applied where there is a generic code, irrespective of specific datatype.
 
 // main function.
-import 'dart:isolate';
 
 void main(List<String> args) {
   // UniList type list is made and elements are added in it.
