@@ -34,7 +34,7 @@ extension MyString on String? {
 
 // The Student class.
 class Student {
-  int _rollNo;
+  final int _rollNo;
   String name;
 
   Student({required int rollNumber, required this.name}) : _rollNo = rollNumber;
