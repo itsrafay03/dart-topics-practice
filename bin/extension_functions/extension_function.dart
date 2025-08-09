@@ -13,6 +13,10 @@ void main(List<String> args) {
   // call the extension method of Student class.
   Student student = Student(rollNumber: 21, name: 'Salman');
   student.detail();
+  student.information();
+
+  // We can Not create an object of Extension type we made.
+  // MyString myString = MyString();
 }
 
 // MyString is the Extension type of String? class, in it there are 2 instance functions called Extension Functions. Now we can access these function from object of String? class or it's child classes like String class.
@@ -28,7 +32,8 @@ extension MyString on String? {
   // .every((element) => condition): This checks if every rune (character code) satisfies the condition, that it's a digit (ASCII code between 48 and 57).
   // If we don't use "?? false" then if the condition is false it will return null. '?? false' ensures that if the string is null, we return false instead of null. So the function always returns a bool, never null.
   bool isDigitString() {
-    return this?.runes.every((element) => element >= 48 && element <= 57) ?? false;
+    return this?.runes.every((element) => element >= 48 && element <= 57) ??
+        false;
   }
 }
 
@@ -48,6 +53,13 @@ class Student {
 // Extension type to add extension methods in Student class.
 extension StudentSubType on Student {
   void detail() {
-    print('$name is my friend and his rollNumber is $_rollNo');
+    print('Details: $name is my friend and his rollNumber is $_rollNo');
+  }
+}
+
+// We can also create unnamed(anonymous) extensions but these extensions cannot be accessed outside the library.
+extension on Student {
+  void information() {
+    print('The information is that $name is my friend and his rollNumber is $_rollNo');
   }
 }
