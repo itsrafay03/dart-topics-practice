@@ -60,7 +60,6 @@ class University {
 }
 
 // Use of Never
-
 Never infiniteLoop() {
   while (true) {
     print("Yes");
