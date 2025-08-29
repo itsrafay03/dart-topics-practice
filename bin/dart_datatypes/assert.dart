@@ -11,10 +11,9 @@ void main(List<String> args) {
 }
 
 // If age > 18 is true, nothing happens, and the code continues executing.
-// If age > 18 is false, the program throws an AssertionError with the optional message
-// "Age must be greater than 18."
+// If age > 18 is false, the program throws an AssertionError with the optional message "Age must be greater than 18."
 
-/*Important Notes
+/*Important Notes:
 Assert statements are only executed in debug mode. In release mode, they are ignored, which makes them
 safe to use for checks that should not impact production performance.
 Dart's assert is commonly used in Flutter development, especially for widget validation
