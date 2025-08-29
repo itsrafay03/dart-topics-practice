@@ -21,10 +21,6 @@ class Student extends Human with CarDriver {
   String studentName;
 
   // 1st way: Override the members of mixin in thic class, it will give you setters/getters of the members of mixin as given below. Then use them in constructor or you can give them default value.
-
-
-
-
   // 1sy way.
   Student({required this.studentName, carName = 'suzuki', speed}) {
     carName = carName;
