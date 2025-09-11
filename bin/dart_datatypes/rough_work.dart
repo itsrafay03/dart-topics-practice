@@ -10,7 +10,7 @@ String f = """Ali is well
 and you are shell.""";
 bool g = true;
 void h =
-    10; // It can be declare but It will give compile time error when we are trying to access h.
+    10; // It can be declare but it will give compile time error when we are trying to access h.
 
 //print(a);  // needs a function body to execute.
 
@@ -39,7 +39,7 @@ void main() {
   // Assert.
   assert(20 > 5);
 
-  // Try Catch Block.
+  // The Try Catch Block.
   var value = 3;
   try {
     assert(3 > 20);
