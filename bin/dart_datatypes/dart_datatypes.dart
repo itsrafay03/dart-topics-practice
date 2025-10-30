@@ -68,9 +68,10 @@ void main(List<String> arguments) {
   assert(onePoint == 1.1);
   assert(20 > 5);
 
-  print(3.14159.toStringAsFixed(2));
-  String piAsString = 3.14159.toStringAsFixed(2);
+  print(3.14159.toStringAsFixed(2));  
+  String piAsString = 3.14159.toStringAsFixed(2);  
   assert(piAsString == '3.14');
+
   // Constant int and Strings.
   const constNum = 0;
   const constString = 'Usman Bhai';
