@@ -32,7 +32,7 @@ void main(List<String> args) {
   Student ss;
   // print(ss);
   // print(ss.runtimeType);
-  ss = Student();
+  ss = Student(); 
   print(ss.runtimeType);
   print(ss);
   print(ss.study());

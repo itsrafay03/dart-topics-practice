@@ -20,7 +20,7 @@ void main(List<String> args) {
   // print(price);   // Also CompileTime Error bec late variable should be initilize before use but although it is nullable but we have to initilize it before use.
 
   int? b;
-  // size = b;  // Compiletime Error as b is nullable but late variable is nullsafe to we can't assing nullable to nullsafe.
+  // size = b;  // Compiletime Error as b is nullable and also not initilize, but late variable is nullsafe to we can't assing nullable to nullsafe.
 
   int? c;
   // size = c!; // To finish error we can use assertion operator. But it will give Runtime error if we run program as c is null.
