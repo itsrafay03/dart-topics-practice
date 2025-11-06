@@ -13,6 +13,7 @@ void main(List<String> args) {
   print(count); // Output: 10 (because count is no longer null)
 }
 
+// Singelton Design Pattern.
 class DB {
   static DB? _instance;
   DB._internal();

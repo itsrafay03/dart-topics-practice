@@ -1,5 +1,5 @@
 // Cascade operator(..) it work same as Builder design pattern in Java.
-// That we can only access instance members by using then with object reference.
+// That we can only access instance members by using them with object reference.
 
 Student? s;
 void main(List<String> args) {
