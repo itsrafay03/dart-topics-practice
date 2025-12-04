@@ -104,10 +104,10 @@ print(tech1.age);
 
 // Generally the class object is only a Runtime constant as object is made at runtime when constructor is called.
 
-// const Student studentConst = Student(); // Class object cann't be compile time constant.
+// const Student studentConst = Student(); // Class object cann't be compile time constant. Unless all it's fields are final and constructor is const.
 final Student studentFinal = Student();   // Class object must be runtime constant.
 // Duration has all static constant fields so we can make it's object as compile time constant.
-const Duration durationConst = Duration();  
+const Duration durationConst = Duration();  // As all it's fields are final and constructor is const.
 final Duration durationFinal = Duration();  // It can also be runtime constant as that like other classes.
 }
 

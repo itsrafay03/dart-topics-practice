@@ -4,7 +4,7 @@ List<int>? nullList;
 
 void main(List<String> args) {
   List list1 = [];
-  print(list1.runtimeType); // List<dynamic> as not type specified for list.
+  print(list1.runtimeType); // List<dynamic> as no type specified for list.
 
   List list2 = [1, 2, 3, 4];
   print(
@@ -141,10 +141,10 @@ void main(List<String> args) {
   // Another important concept for all collections literals.
   List<int>? firstList;  // Means firstList can refer to null/nothing or it refer to a list of intigers.
   print(firstList);
-  // firstList = [1,null, 3, null,7];  // Error as firstList should only asssign to a list which contain onlt int, no other values even it can not be null values.  
+  // firstList = [1,null, 3, null,7];  // Error as firstList should only asssign to a list which contain only int, no other values even it can not be null values.  
   firstList = [1,2,3,4,5];  // Now correct as firstlist can only refer to nothing or list of only intigers.  
 
-  List<int?> secondList; // Means secondList must refer to a list and elements in that list could be intigers or null.
+  List<int?> secondList; // Means secondList must refer to a list and elements, in that list could be intigers or null.
   // print(secondList);     // Error: secondList is not nullable so we have to assign some value before using secondlist variable.
   secondList = [1,null, 3, null,7];   // as secondlist can refer to a list which can contain both int and null values, so here it do not give error as in firstlist it gives error for this list.
   print(secondList);
@@ -156,6 +156,4 @@ void main(List<String> args) {
   thirdList = [1,null, 3, null,7];
   // As thirdList can refer to a List which can contain int or null values or both in a single list.
   // thirdList is very dynamic or flexible. 
-  
-
 }
