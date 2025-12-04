@@ -40,7 +40,9 @@ void main(List<String> args) {
   var z = 20;   // z is a variable
   int x = 45;  // x is a variable
   // const int yy = z; // Error at z
+  // const int yy =  x; // Error at x
   final int yyy = x;
+  final int yyy2 = z;
 // The reason is that the z and x are variable means their value be determined at runtime. So when we
 // initilize const variable yy with variable it give error as const needs a compile time constant value
 // so here it's like we are not giving any value to yy so it shows error Const variables must be initialized with a constant value.
@@ -63,7 +65,7 @@ const baz = [];
 // It creates a compile-time constant empty list, and baz cannot be reassigned.
 final bazz = [];
 // The variable bazz is final, and only assigned once.
-// However, the list would be mutable.
+// However, the list would be mutable. We can add, remove, or modify elements in mutable lists. 
 final bazzz = const [];
 // Then the variable bazzz is final(only assigned once), and the list is immutable(can not change elements).
 

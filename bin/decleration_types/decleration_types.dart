@@ -15,7 +15,7 @@ void main(List<String> arguments) {
   print(ss.runtimeType); // Null as nothing initilize to variable ss.
   var num2 = 23;      
   print(num2.runtimeType); // prints int.
-  // num2 = 3.415;    // Compile time error as first int value initilize to num2 so it's datatype is now fixed as int
+  // num2 = 3.415;    // Compile time error as first int value initilize to num2 so it's datatype is fixed as int
   // we cann't assign any other D.T value to num2.
   num2 = 999;
   print(num2);   // prints 999
